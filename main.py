@@ -1,20 +1,13 @@
-import requests
-from bs4 import BeautifulSoup
-from extractors.remoteok import extract_rto_job
-from extractors.weworkremote import extract_wwr_job
-keyword = input("What do you want to search for? ")
+from flask import Flask, render_template
 
-rto = extract_rto_job(keyword)
-wwr = extract_wwr_job(keyword)
-jobs = rto + wwr
-print(jobs)
+app = Flask("Webscrapper")
 
+@app.route("/")
+def home():
+    return render_template("home.html", name="kim")
 
+@app.route("/hello")
+def hello():
+    return 'hello you!'
 
-file = open(f"{keyword}.csv", "w")
-
-file.write("Company, Position, Verifyed, Region, Salary\n")
-for job in jobs:
-    file.write(f"{job['company']}, {job['positon']}, {job['verified']}, {job['region']}, {job['salary']}\n")
-
-file.close()
+app.run("127.0.0.1")
