@@ -31,7 +31,7 @@ def extract_wwr_job(search_term):
 
             job_data={
                 'company' : company.strip().replace(','," "),
-                'positon' : title_name.strip().replace(','," "),
+                'position' : title_name.strip().replace(','," "),
                 'verified' : verified_a.replace(','," "),
                 'region' : region.strip().replace(','," "),
                 'salary' : salary.strip().replace(','," ")

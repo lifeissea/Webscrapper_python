@@ -34,7 +34,7 @@ def extract_rto_job(search_term):
 
             job_data={
                 'company' : company.strip(),
-                'positon' : title_name.strip(),
+                'position' : title_name.strip(),
                 'verified' : verified_a,
                 'region' : region.strip(),
                 'salary' : salary.strip()
