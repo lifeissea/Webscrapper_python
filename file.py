@@ -3,6 +3,6 @@ def save_to_file(file_name, jobs):
 
     file.write("Company, Position, Verifyed, Region, Salary\n")
     for job in jobs:
-        file.write(f"{job['company']}, {job['positon']}, {job['verified']}, {job['region']}, {job['salary']}\n")
+        file.write(f"{job['company']}, {job['position']}, {job['verified']}, {job['region']}, {job['salary']}\n")
 
     file.close()
